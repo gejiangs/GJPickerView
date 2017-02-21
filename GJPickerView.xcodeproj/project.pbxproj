@@ -13,6 +13,8 @@
 		AD43E0271E5BE0F70012DF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD43E0251E5BE0F70012DF0D /* Main.storyboard */; };
 		AD43E0291E5BE0F70012DF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD43E0281E5BE0F70012DF0D /* Assets.xcassets */; };
 		AD43E02C1E5BE0F70012DF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD43E02A1E5BE0F70012DF0D /* LaunchScreen.storyboard */; };
+		AD43E0361E5BE1110012DF0D /* address.txt in Resources */ = {isa = PBXBuildFile; fileRef = AD43E0331E5BE1110012DF0D /* address.txt */; };
+		AD43E0371E5BE1110012DF0D /* GJPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43E0351E5BE1110012DF0D /* GJPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		AD43E0281E5BE0F70012DF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD43E02B1E5BE0F70012DF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD43E02D1E5BE0F70012DF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD43E0331E5BE1110012DF0D /* address.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = address.txt; sourceTree = "<group>"; };
+		AD43E0341E5BE1110012DF0D /* GJPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJPickerView.h; sourceTree = "<group>"; };
+		AD43E0351E5BE1110012DF0D /* GJPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 		AD43E01B1E5BE0F70012DF0D /* GJPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				AD43E0331E5BE1110012DF0D /* address.txt */,
+				AD43E0341E5BE1110012DF0D /* GJPickerView.h */,
+				AD43E0351E5BE1110012DF0D /* GJPickerView.m */,
 				AD43E01F1E5BE0F70012DF0D /* AppDelegate.h */,
 				AD43E0201E5BE0F70012DF0D /* AppDelegate.m */,
 				AD43E0221E5BE0F70012DF0D /* ViewController.h */,
@@ -141,6 +149,7 @@
 				AD43E02C1E5BE0F70012DF0D /* LaunchScreen.storyboard in Resources */,
 				AD43E0291E5BE0F70012DF0D /* Assets.xcassets in Resources */,
 				AD43E0271E5BE0F70012DF0D /* Main.storyboard in Resources */,
+				AD43E0361E5BE1110012DF0D /* address.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +163,7 @@
 				AD43E0241E5BE0F70012DF0D /* ViewController.m in Sources */,
 				AD43E0211E5BE0F70012DF0D /* AppDelegate.m in Sources */,
 				AD43E01E1E5BE0F70012DF0D /* main.m in Sources */,
+				AD43E0371E5BE1110012DF0D /* GJPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B4VX949QFW;
 				INFOPLIST_FILE = GJPickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dacheng.GJPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B4VX949QFW;
 				INFOPLIST_FILE = GJPickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dacheng.GJPickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
