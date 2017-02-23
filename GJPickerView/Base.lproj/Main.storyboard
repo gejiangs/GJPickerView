@@ -22,8 +22,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6F-PH-o6f">
-                                <rect key="frame" x="133" y="318" width="108" height="30"/>
-                                <state key="normal" title="选择省、市、区"/>
+                                <rect key="frame" x="171.5" y="318" width="31" height="30"/>
+                                <state key="normal" title="选择"/>
                                 <connections>
                                     <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdK-k0-8KJ"/>
                                 </connections>
