@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GJPickerView"
-  s.version      = "1.0.0"
-  s.summary      = "快速调用PickerView"
+  s.version      = "0.0.1"
+  s.summary      = "A short description of GJPickerView."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,9 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   封装PickerView，快速调用，高效,易懂,支持自定义按钮文字，颜色
                    DESC
 
-  s.homepage     = "https://github.com/gejiangs/GJPickerView"
+  s.homepage     = "http://github.com/gejiangs/GJPickerView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -65,7 +64,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "5.0"
+   s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -80,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/gejiangs/GJPickerView.git", :tag => "v#{s.version}" }
+  s.source       = { :git => "http://github.com/gejiangs/GJPickerView.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "GJPickerView/*"
+  s.source_files  = "GJPickerView/GJPickerView/*"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -130,7 +129,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+  # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"

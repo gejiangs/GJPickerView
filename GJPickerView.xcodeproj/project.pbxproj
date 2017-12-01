@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD240E3F1FD155E1004B558F /* GJPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD240E3E1FD155E1004B558F /* GJPickerView.m */; };
 		AD43E01E1E5BE0F70012DF0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43E01D1E5BE0F70012DF0D /* main.m */; };
 		AD43E0211E5BE0F70012DF0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43E0201E5BE0F70012DF0D /* AppDelegate.m */; };
 		AD43E0241E5BE0F70012DF0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43E0231E5BE0F70012DF0D /* ViewController.m */; };
 		AD43E0271E5BE0F70012DF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD43E0251E5BE0F70012DF0D /* Main.storyboard */; };
 		AD43E0291E5BE0F70012DF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD43E0281E5BE0F70012DF0D /* Assets.xcassets */; };
 		AD43E02C1E5BE0F70012DF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD43E02A1E5BE0F70012DF0D /* LaunchScreen.storyboard */; };
-		AD43E0371E5BE1110012DF0D /* GJPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43E0351E5BE1110012DF0D /* GJPickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD240E3D1FD155E1004B558F /* GJPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJPickerView.h; sourceTree = "<group>"; };
+		AD240E3E1FD155E1004B558F /* GJPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJPickerView.m; sourceTree = "<group>"; };
 		AD43E0191E5BE0F70012DF0D /* GJPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GJPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD43E01D1E5BE0F70012DF0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD43E01F1E5BE0F70012DF0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -27,8 +29,6 @@
 		AD43E0281E5BE0F70012DF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD43E02B1E5BE0F70012DF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD43E02D1E5BE0F70012DF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD43E0341E5BE1110012DF0D /* GJPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJPickerView.h; sourceTree = "<group>"; };
-		AD43E0351E5BE1110012DF0D /* GJPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJPickerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD240E3C1FD155E1004B558F /* GJPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				AD240E3D1FD155E1004B558F /* GJPickerView.h */,
+				AD240E3E1FD155E1004B558F /* GJPickerView.m */,
+			);
+			path = GJPickerView;
+			sourceTree = "<group>";
+		};
 		AD43E0101E5BE0F70012DF0D = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +70,7 @@
 		AD43E01B1E5BE0F70012DF0D /* GJPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				AD43E0341E5BE1110012DF0D /* GJPickerView.h */,
-				AD43E0351E5BE1110012DF0D /* GJPickerView.m */,
+				AD240E3C1FD155E1004B558F /* GJPickerView */,
 				AD43E01F1E5BE0F70012DF0D /* AppDelegate.h */,
 				AD43E0201E5BE0F70012DF0D /* AppDelegate.m */,
 				AD43E0221E5BE0F70012DF0D /* ViewController.h */,
@@ -159,7 +167,7 @@
 				AD43E0241E5BE0F70012DF0D /* ViewController.m in Sources */,
 				AD43E0211E5BE0F70012DF0D /* AppDelegate.m in Sources */,
 				AD43E01E1E5BE0F70012DF0D /* main.m in Sources */,
-				AD43E0371E5BE1110012DF0D /* GJPickerView.m in Sources */,
+				AD240E3F1FD155E1004B558F /* GJPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
