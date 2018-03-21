@@ -1,6 +1,6 @@
 //
-//  JamPickerView.m
-//  Framework
+//  GJPickerView.h
+//  GJPickerView
 //
 //  Created by gejiangs on 16/3/16.
 //  Copyright © 2016年 guojiang. All rights reserved.
@@ -14,8 +14,11 @@
     BOOL isShow;
 }
 
-@property (nonatomic, strong) UIView *pickBoxView;
-@property (nonatomic, strong) UIPickerView *pickerView;
+@property (nonatomic, strong)   UILabel *titleLabel;
+@property (nonatomic, strong)   UIButton *leftButton;
+@property (nonatomic, strong)   UIButton *rightButton;
+@property (nonatomic, strong)   UIView *pickBoxView;
+@property (nonatomic, strong)   UIPickerView *pickerView;
 
 @end
 
@@ -25,6 +28,16 @@
 {
     GJPickerView *selfView = [[GJPickerView alloc] initWithFrame:view.bounds];
     
+    [view addSubview:selfView];
+    [selfView show:YES];
+    
+    return selfView;
+}
+
++(instancetype)showInView:(UIView *)view delegate:(id<GJPickerViewDelegate>)delegate
+{
+    GJPickerView *selfView = [[GJPickerView alloc] initWithFrame:view.bounds];
+    selfView.delegate = delegate;
     [view addSubview:selfView];
     [selfView show:YES];
     
@@ -53,27 +66,25 @@
     _pickBoxView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_pickBoxView];
     
-    self.cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_cancelButton setFrame:CGRectMake(15, 10, 70, 30)];
-    [_cancelButton setTitle:NSLocalizedString(@"Cancel", nil) forState:UIControlStateNormal];
-    [_cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    _cancelButton.layer.cornerRadius = 10.f;
-    _cancelButton.layer.masksToBounds = YES;
-    [_cancelButton setBackgroundImage:[self imageWithColor:[self colorR:204 G:204 B:204]] forState:UIControlStateNormal];
-    [_cancelButton setBackgroundImage:[self imageWithColor:[self colorR:165 G:165 B:165]] forState:UIControlStateHighlighted];
-    [self.pickBoxView addSubview:_cancelButton];
+    self.leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_leftButton setFrame:CGRectMake(15, 10, 70, 30)];
+    [_leftButton setTitle:NSLocalizedString(@"Cancel", nil) forState:UIControlStateNormal];
+    [_leftButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_leftButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _leftButton.layer.cornerRadius = 10.f;
+    _leftButton.layer.masksToBounds = YES;
+    [_leftButton setBackgroundImage:[self imageWithColor:[self colorR:204 G:204 B:204]] forState:UIControlStateNormal];
+    [self.pickBoxView addSubview:_leftButton];
     
-    self.sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_sureButton setFrame:CGRectMake(self.frame.size.width - 85, 10, 70, 30)];
-    [_sureButton setTitle:NSLocalizedString(@"Sure", nil) forState:UIControlStateNormal];
-    [_sureButton addTarget:self action:@selector(sureAction:) forControlEvents:UIControlEventTouchUpInside];
-    [_sureButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    _sureButton.layer.cornerRadius = 10.f;
-    _sureButton.layer.masksToBounds = YES;
-    [_sureButton setBackgroundImage:[self imageWithColor:[self colorR:140 G:198 B:63]] forState:UIControlStateNormal];
-    [_sureButton setBackgroundImage:[self imageWithColor:[self colorR:117 G:158 B:53]] forState:UIControlStateHighlighted];
-    [self.pickBoxView addSubview:_sureButton];
+    self.rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_rightButton setFrame:CGRectMake(self.frame.size.width - 85, 10, 70, 30)];
+    [_rightButton setTitle:NSLocalizedString(@"Sure", nil) forState:UIControlStateNormal];
+    [_rightButton addTarget:self action:@selector(sureAction:) forControlEvents:UIControlEventTouchUpInside];
+    [_rightButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _rightButton.layer.cornerRadius = 10.f;
+    _rightButton.layer.masksToBounds = YES;
+    [_rightButton setBackgroundImage:[self imageWithColor:[self colorR:140 G:198 B:63]] forState:UIControlStateNormal];
+    [self.pickBoxView addSubview:_rightButton];
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 15, self.frame.size.width-200, 20)];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -86,6 +97,23 @@
     [_pickBoxView addSubview:_pickerView];
 }
 
+-(void)setTitle:(NSString *)title
+{
+    _title = title;
+    self.titleLabel.text = title;
+}
+
+-(void)setLeftText:(NSString *)leftText
+{
+    _leftText = leftText;
+    [self.leftButton setTitle:leftText forState:UIControlStateNormal];
+}
+
+-(void)setRightText:(NSString *)rightText
+{
+    _rightText = rightText;
+    [self.rightButton setTitle:rightText forState:UIControlStateNormal];
+}
 
 -(void)cancelAction:(id)sender
 {
@@ -94,6 +122,7 @@
     }
     [self show:NO];
 }
+
 
 -(void)sureAction:(id)sender
 {
@@ -121,6 +150,20 @@
             [self removeFromSuperview];
         }
     }];
+}
+
+-(void)setLeftText:(NSString *)text textColor:(UIColor *)color backgroundColor:(UIColor *)bgColor
+{
+    [self.leftButton setTitle:text forState:UIControlStateNormal];
+    [self.leftButton setTitleColor:color forState:UIControlStateNormal];
+    [self.leftButton setBackgroundImage:[self imageWithColor:bgColor] forState:UIControlStateNormal];
+}
+
+-(void)setRightText:(NSString *)text textColor:(UIColor *)color backgroundColor:(UIColor *)bgColor
+{
+    [self.rightButton setTitle:text forState:UIControlStateNormal];
+    [self.rightButton setTitleColor:color forState:UIControlStateNormal];
+    [self.rightButton setBackgroundImage:[self imageWithColor:bgColor] forState:UIControlStateNormal];
 }
 
 -(void)reloadAllComponents
@@ -163,6 +206,19 @@
 -(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
     return 40;
+}
+
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
+{
+    if (_delegate && [_delegate respondsToSelector:@selector(pickerView:widthForComponent:)]) {
+        return [_delegate pickerView:self widthForComponent:component];
+    }
+    NSInteger number = 0;
+    if (_delegate && [_delegate respondsToSelector:@selector(numberOfComponentsInPickerView:)]) {
+         number = [_delegate numberOfComponentsInPickerView:self];
+    }
+    return [UIScreen mainScreen].bounds.size.width / number;
 }
 
 

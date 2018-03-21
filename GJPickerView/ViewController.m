@@ -38,9 +38,9 @@
 
 -(IBAction)show:(id)sender
 {
-    self.pickerView = [GJPickerView showInView:self.view];
-    _pickerView.titleLabel.text = @"选择";
-    _pickerView.delegate = self;
+    self.pickerView = [GJPickerView showInView:self.view delegate:self];
+    _pickerView.title = @"选择";
+    [_pickerView setLeftText:@"取消" textColor:[UIColor whiteColor] backgroundColor:[UIColor redColor]];
 }
 
 
